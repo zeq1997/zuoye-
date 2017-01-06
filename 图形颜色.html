@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+
+<div id="h" style ="width:100px;height:100px;border: 1px solid;background:white;position:absolute;top:100;left:100">
+<script>
+var a = 0;
+var b = ["red","blue","yellow","black"];
+function c()
+{
+    h.style.color = b[a];
+    a = a + 1;
+    if(a>=b.length)
+        a=0;
+}
+setInterval(c,600);
+</script>
+<script>
+var m = 0;
+var n = ["blue","red","black","yellow"];
+function k()
+{
+    h.style.background = n[m];
+    m = m + 1;
+    if(m>=n.length)
+       m=0;
+}
+
+setInterval(k,600);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+function k()
+{
+switch(h.value)
+{
+    case "1":
+        i.src="back01.jpg"
+        break;
+    case "2":
+        i.src="back02.jpg"
+        break;
+    case "3":
+        i.src="back03.jpg"
+        break;
+    case "4":
+        i.src="back.jpg"
+        break;
+    default:
+        i.src="back.jpg"
+        break;
+}
+}
+var n=1;
+function _p()
+{
+    h.value=n;
+    n=n+1;
+    j.click();
+    if(n>4)
+        n=1;
+}
+setInterval(_p,500);
+h.style.display ="none";
+j.style.display ="none";
+</script>
+</head>
+<body>
+<center>
+<img id="i" src="back.jpg" width="1000" height="480";div style="border:20px solid black" />
+<br/>
+<input id="h" style="width:1050;height:20"/><button id ="j"onclick="k();">¿ªÊ¼</button>
+</center>
+<script>
+h.style.display ="none";
+j.style.display ="none";
+</script>
+</body>
+</html>

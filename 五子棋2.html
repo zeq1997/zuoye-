@@ -1,0 +1,153 @@
+﻿<html>
+<head>
+</head>
+<body onload="kk()">
+<script>
+function ab()
+{   
+    for(var x=0;x<10;x++)
+    {   
+        var a=0;
+        for(var y=0;y<10;y++)
+        {   
+            if(divs[x][y].style.background=="black")
+            {
+                a=a+1;
+                if(a>4)
+               
+                {
+                    alert("win1");
+                    break;
+                }                                           
+            }
+            else
+               a=0;                            
+        }        
+    }
+    for(var y=0;y<10;y++)
+    {   
+        var a=0;
+        for(var x=0;x<10;x++)
+        {   
+            if(divs[x][y].style.background=="black")
+            {
+                a=a+1;
+                if(a>4)
+               
+                {
+                    alert("win2");
+                    break;
+                }                                           
+            }
+            else
+               a=0;                            
+        }        
+    }
+    for(var x=0;x<10;x++)//x是横坐标  __y是纵坐标|
+    {   
+        var a=0;
+        for(var y=0;y<10-x;y++)
+        {   
+            if(divs[x+y][y].style.background=="black")
+            {
+                a=a+1;
+                if(a>4)
+               
+                {
+                    alert("win3");
+                    break;
+                }                                           
+            }
+            else
+               a=0;                            
+        }        
+    }
+    for(var x=0;x<10;x++)//x是横坐标  __y是纵坐标|
+    {   
+        var a=0;
+        for(var y=0;y<10-x;y++)
+        {   
+            if(divs[x+y][y].style.background=="black")
+            {
+                a=a+1;
+                if(a>4)
+               
+                {
+                    alert("win4");
+                    break;
+                }                                           
+            }
+            else
+               a=0;                            
+        }        
+    }
+    for(var x=0;x<10;x++)//x是横坐标  __y是纵坐标|  
+    {   
+        var a=0;
+        for(var y=0;y<x;y++)
+        {   
+            if(divs[x-y][y].style.background=="black")
+            {
+                a=a+1;
+                if(a>4)
+               
+                {
+                    alert("win5");
+                    break;
+                }                                           
+            }
+            else
+               a=0;                            
+        }        
+    }
+    for(var x=0;x<10;x++)
+    {   var a=0;
+        for(var y=0;y<10-x;y++)
+        {   
+            if(divs[x+y][9-y].style.background=="black")//x固定y变量；x=0；y=0；x=0 y=9；
+            {                                                        // x=0；y=1；x=1 y=8            
+                a=a+1;                                   //注；找固定值从0开始不是9；所以反着算
+                if(a>4)
+                                  //for循环；还能for(var x=0;x<10;x++)；
+                {                                        //后面接 n个for(var y=0;y<？;y++)；
+                    alert("win6");
+                    break;
+                }                                           
+            }
+            else
+               a=0;                            
+        }        
+    }
+}    
+var divs=[];
+function kk()
+{
+    for(var i=0;i<10;i++)
+    {
+        var dd=[];
+        for(var j=0;j<10;j++)
+        {
+            var d=document.createElement("div");
+            d.style.width="100px";
+            d.style.height="100px";
+            d.style.background="gray";
+            d.style.border="1px solid red"
+            d.style.position="absolute";
+            d.style.left =i*100+"px";
+            d.style.top=j*100+"px";
+            document.body.appendChild(d);
+            d.onclick=function()
+            {   
+                console.log(parseInt(this.style.left)/100);
+                console.log(parseInt(this.style.top)/100);
+                this.style.background="black";
+                ab();           
+            }            
+            dd.push(d);
+        }
+        divs.push(dd);
+    }	
+}
+</script>
+</body>
+</html>

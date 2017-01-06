@@ -1,0 +1,159 @@
+<html>
+<head>
+<body onload="k()">
+
+<div id="pp" style ="width:150px;height:150px;border:3px solid green;background:black;position:absolute;left:1100px;top:200px"></div>
+
+<script>
+var r=0;
+function u()
+{
+    if(r%2==0)
+    {
+        pp.style.background="white";
+    }
+    else
+        r=r+1;
+}
+
+var divs=[];
+function k()
+{
+    for(var i=0;i<10;i++)
+    {
+        var divx=[];
+
+        for(var j=0;j<10;j++)
+        {
+        var c=document.createElement("div");
+
+        c.style.width="100px";
+        c.style.height="100px";
+        c.style.background="gray";
+        c.style.border="1px solid blue"
+        c.style.position="absolute";
+        c.style.left=i*100+"px";
+        c.style.top=j*100+"px";
+        c.onclick= function()
+        {
+
+            if(r%2!=0)
+            {
+                pp.style.background="black";
+                this.style.background="white";
+                r=r+1;
+            }
+            else
+            {
+                pp.style.background="white";
+                this.style.background="black";
+                r=r+1;
+            }
+
+            for(var j=0;j<10;j++)
+            {
+                var m=0; 
+                var n=0;
+                for(var i=0;i<10;i++)
+                {
+                    if(divs[i][j].style.background=="black")
+                    {
+                        m=m+1
+                        if(m>4)
+                        {
+                            alert("win")
+                            break;
+                        }
+                    }
+                    else
+                        m=0;
+                    if(divs[j][i].style.background=="black")
+                    {
+                        n=n+1
+                        if(n>4)
+                        {
+                            alert("win")
+                            break;
+                        }
+                    }
+                    else
+                        n=0;
+                }
+            }
+
+
+            for(var z=0;z<10;z++)
+            {
+                var s=0;
+                var t=0;
+                for(var v=0;v<10-z;v++)
+                {
+                    if(divs[z+v][v].style.background=="black")
+                    {
+                        s=s+1;
+                        if(s>4)
+                        {
+                            alert("win1")
+                            break;
+                        }
+                    }
+                    else
+                        s=0;
+                    if(divs[v][z+v].style.background=="black")
+                    {
+                        t=t+1;
+                        if(t>4)
+                        {
+                            alert("win2")
+                            break;
+                        }
+                    }
+                    else
+                        t=0;
+                }
+                var x=0;
+                var o=0;
+                for(var b=0;b<z+1;b++)
+                {
+                    if(divs[z-b][b].style.background=="black")
+                    {
+                        x=x+1;
+                        if(x>4)
+                        {
+                            alert("win3")
+                            break;
+                        }
+                    }
+                    else
+                        x=0;
+                }
+                for(var d=0;d<10-z;d++)
+                {
+                    if(divs[z+d][9-d].style.background=="black")
+                    {
+                        o=o+1;
+                        if(o>4)
+                        {
+                            alert("win4")
+                            break;
+                        }
+                    }
+                    else
+                        o=0;
+                }
+            }
+        }
+        document.body.appendChild(c);
+        divx.push(c);
+        }
+        divs.push(divx);
+    }
+    return r;
+}
+
+
+</script>
+
+</body>
+</head>
+</html>

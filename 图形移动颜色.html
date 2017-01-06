@@ -1,0 +1,37 @@
+<html>
+<head>
+<script>
+
+var g=0;
+var h=["red","yellow","blue","green","black"];
+function j()
+{
+    oo.style.background=h[g];
+    g=g+1;
+    if(g>=h.length)
+        g=0;
+}
+
+setInterval(j,500);
+</script>
+</head>
+<body>
+<div id="oo" style="width:100;height:100;border:1px solid;background:red;position:absolute:top:100;left:100"/>
+<script>
+oo.style.position ="relative";
+var n=100
+var m=10
+function k()
+{
+    oo.style.left=n+"px";
+    n=n+m
+    if(n>=200)
+        m=-m
+    if(n<=100)
+        m=-m
+       
+}
+setInterval(k,100);
+</script>
+</body>
+</html>

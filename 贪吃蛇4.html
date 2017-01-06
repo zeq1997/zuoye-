@@ -1,0 +1,162 @@
+<html>
+<head>
+</head>
+<body onload="kk()">
+
+<button style="width:30px;height:30px;position:absolute;left:750px;top:85px" onclick="ab()";>下</button>
+<button style="width:30px;height:30px;position:absolute;left:750px;top:25px" onclick="ac()";>上</button>
+<button style="width:30px;height:30px;position:absolute;left:720px;top:55px" onclick="ae()";>左</button>
+<button style="width:30px;height:30px;position:absolute;left:780px;top:55px" onclick="ad()";>右</button>
+<button style="width:30px;height:30px;position:absolute;left:750px;top:55px" onclick="kk()";>原</button>
+<script>
+var b=[[1,1],[1,2],[1,3]];
+var x=1;
+var s=[3,0];
+function resetColor()
+{
+    for(var i=0;i<4;i++)
+    {
+	    for(var j=0;j<4;j++)
+        {
+            divs[i][j].style.background="red";
+        }
+    }
+	divs[s[0]][s[1]].style.background="blue";
+    for (var v=0;v<b.length-1;v++)
+    {
+        var _p=divs[b[v][0]][b[v][1]];
+        _p.style.background="green";//蛇身
+    }
+    divs[b[b.length-1][0]][b[b.length-1][1]].style.background="yellow";
+}	
+
+
+function ab()
+{
+    if(x+1==0)
+        return;
+	x=1;
+	move();	
+    return ;
+}
+function ac()
+{
+    if(x-1==0)
+        return ;
+	x=-1;
+	move();
+    return 
+}
+
+function ad()
+{
+    if(x+2==0)
+        return ;
+    x=2;
+    console.log(b);
+    move();
+    return; 
+}
+
+function ae()
+{
+    if(x-2==0)
+        return;
+	x=-2;
+	move();
+    return; 
+}
+var divs=[]
+function kk()
+{
+    for(var i=0;i<4;i++)
+    {
+        var divline=[];
+        for(var j=0;j<4;j++)
+        {
+            var d=document.createElement("div");
+            d.style.width="150px";
+            d.style.height="150px";
+            d.style.background="red";
+            d.style.border="1px solid black"
+            d.style.position="absolute";
+            d.style.left =i*150+"px";
+            d.style.top=j*150+"px";
+            document.body.appendChild(d);
+            divline.push(d);
+        }
+        divs.push(divline);
+    }
+	resetColor();
+}
+
+function move()
+{
+    console.log(b);
+    var n=b[b.length-1][0];
+    var m=b[b.length-1][1];//蛇头
+    switch(x)
+	{
+		case -1:
+			m=(m+4-1)%4;
+			break;
+		case 1:
+		    m=(m+1)%4;
+		    break;
+		case -2:
+		    n = (n+4-1)%4;
+			break;
+		case 2:
+		    n = (n+1)%4;
+			break;
+	}
+    b.push([n,m]);
+    if(!(b[b.length-1][0]==s[0]&&b[b.length-1][1]==s[1]))
+    {
+        b.shift();
+    }
+	else   
+    {   
+	    while(true)
+        {
+             var xx=parseInt(Math.random()*4);
+             var yy=parseInt(Math.random()*4);
+             var isin =false;
+             b.reduce(function(_x,_y)
+             {
+                 return _y[0]==xx&&_y[1]==yy?true:_x;
+             },false);
+             for(var i=0;i<b.length;i++)
+             {
+                 if(b[i][0]==xx&&b[i][1]==yy)
+                   isin = true;//如果食物在蛇身上
+             }
+             if(!isin)//如果食物没在蛇身上
+             {
+                 s[0]=xx;
+                 s[1]=yy;
+                 break;
+             }
+        }
+     }
+     var ll =true;
+     for(var o=0;o<b.length-1;o++)
+     {
+         if(b[b.length-1][0]==b[o][0]&&b[b.length-1][1]==b[o][1])         
+         {  
+            ll=false;
+                 break;
+         }
+     }                 
+     if(ll==false)
+     {
+        alert("游戏结束"); 
+         b=[[1,1],[1,2],[1,3]];
+         x=1;
+         s=[3,0];        
+     }                     
+    resetColor();
+}	
+</script>
+</body>
+</html>
