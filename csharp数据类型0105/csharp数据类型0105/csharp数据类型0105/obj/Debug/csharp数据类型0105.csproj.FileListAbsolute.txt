@@ -1,0 +1,6 @@
+c:\users\administrator\documents\visual studio 2012\Projects\csharp数据类型0105\csharp数据类型0105\bin\Debug\csharp数据类型0105.exe.config
+c:\users\administrator\documents\visual studio 2012\Projects\csharp数据类型0105\csharp数据类型0105\bin\Debug\csharp数据类型0105.exe
+c:\users\administrator\documents\visual studio 2012\Projects\csharp数据类型0105\csharp数据类型0105\bin\Debug\csharp数据类型0105.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\csharp数据类型0105\csharp数据类型0105\obj\Debug\csharp数据类型0105.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2012\Projects\csharp数据类型0105\csharp数据类型0105\obj\Debug\csharp数据类型0105.exe
+c:\users\administrator\documents\visual studio 2012\Projects\csharp数据类型0105\csharp数据类型0105\obj\Debug\csharp数据类型0105.pdb

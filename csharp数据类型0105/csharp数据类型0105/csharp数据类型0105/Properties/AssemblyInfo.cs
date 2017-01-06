@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过以下
 // 特性集控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("常见类型0104")]
+[assembly: AssemblyTitle("csharp数据类型0105")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("微软中国")]
-[assembly: AssemblyProduct("常见类型0104")]
+[assembly: AssemblyProduct("csharp数据类型0105")]
 [assembly: AssemblyCopyright("Copyright © 微软中国 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("7302c449-7ef7-47da-8291-06d9f812c5b0")]
+[assembly: Guid("c8c3aa15-04f5-42bd-8c5f-91497455debf")]
 
 // 程序集的版本信息由下面四个值组成:
 //

@@ -1,6 +1,0 @@
-c:\users\administrator\documents\visual studio 2012\Projects\常见类型0104\常见类型0104\bin\Debug\常见类型0104.exe.config
-C:\Users\Administrator\Documents\Visual Studio 2012\Projects\常见类型0104\常见类型0104\bin\Debug\常见类型0104.exe
-C:\Users\Administrator\Documents\Visual Studio 2012\Projects\常见类型0104\常见类型0104\bin\Debug\常见类型0104.pdb
-C:\Users\Administrator\Documents\Visual Studio 2012\Projects\常见类型0104\常见类型0104\obj\Debug\常见类型0104.csprojResolveAssemblyReference.cache
-C:\Users\Administrator\Documents\Visual Studio 2012\Projects\常见类型0104\常见类型0104\obj\Debug\常见类型0104.exe
-C:\Users\Administrator\Documents\Visual Studio 2012\Projects\常见类型0104\常见类型0104\obj\Debug\常见类型0104.pdb
