@@ -1,0 +1,8 @@
+function bag(v,w,m)
+{
+    if(w.length==0)
+		return 0;
+	var nofirst = bag(v,w.slice(1),m.slice(1));
+	var hasfirst = w[0]>v ? nofirst : m[0] + bag(v-w[0],w.slice(1),m.slice(1));
+	return hasfirst>nofirst?hasfirst:nofirst;
+}

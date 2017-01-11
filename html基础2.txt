@@ -1,0 +1,225 @@
+<html>
+<head>
+<script>
+var a=0;
+function k()
+{
+    e.value;
+    ID.意义
+    if(e.value<60&&e.value>=0)
+    如果(ID。意义<60且ID。意义>=0)
+    alert("差");
+    警告框("差")；
+    if(e.value>=60&&e.value<70)
+    alert("及格");
+    if(e.value>=70&&e.value<90)
+    alert("良")
+    if(e.value>=90&&e.value<100)
+    alert("优")
+
+}
+</script>
+</head>
+<body>
+
+<input id="e"/><button onclick="k();">确定</button>
+框    ID   ID    按钮   点击    自定义代码    按钮
+</body>
+</html>
+
+___________________________________________________________________________输入相应的内容弹出警告框
+<html>
+<head>
+<script>
+
+function k()
+{
+if(i.value==1)
+{
+    l.style.background="red";
+}else if(i.value==2)
+{
+    l.style.background="black";
+}else if(i.value==3)
+{
+    l.style.background="blue";
+}else
+{
+    l.style.background="yellow"
+}
+}</script>
+</head>
+<body>
+<input id="i"/><button onclick="k();">确定</button>
+<div id="l" style="width:200;height:50;border:1px solid black;background:;position:absolute;top:100;left:0"/>
+</body>
+</html>
+_______________________________________________________________if____输入相应的内容改变图片的颜色
+<html>
+<head>
+<script>
+function k()
+{
+switch(i.value)
+{
+case "1":
+    l.style.background="blue";
+    break;
+case "2":
+    l.style.background="red";
+    break;
+case "3":
+    l.style.background="green";
+    break;
+default:
+    l.style.background="yellow";
+    break;
+}
+}</script>
+</head>
+<body>
+<input id="i"/><button onclick="k();">确定</button>
+<div id="l" style="width:200;height:50;border:1px solid black;background:;position:absolute;top:100;left:0"/>
+</body>
+</html>
+_______________________________________________________________switch_______输入相应的内容改变图颜色（2）
+三目运算符
+var n =12
+var m = n%3==0?"哈":"呵";
+关键词（特殊词）=12%3==0?"内容":"内容";
+                   0比较0 正确的选第一个错误的选第二个
+m的结果是  哈
+var n = 14
+var m =n%3==0?"哈":"呵"；
+m的结果是  呵
+_______________________________________________________________________________三目运算符
+for(var =初始;循环范围;变量)
+{
+    内容;
+    for(function)(switch)(if)
+    {
+        内容;
+        for(function)(switch)(if)
+        {
+            内容;
+            break;结束
+        }
+    }
+}
+
+__________________________________________________________________________________循环内再次循环
+var a =["q","w","e","r","t"]a赋予数组
+for (var i=0;i<a.length;i+=2)循环式
+{
+    a[i+1]=" ";循环内容a[children]赋予" ";
+}
+
+var a=["q","w","e","r","t","y"]a赋予数组
+for (var i=1;i<a.length;i+=2)循环式_2
+{
+    a[i]=" ";循环内容a[children]赋予空格字符
+}
+ 
+________________________________________________________________更改数组里的所有奇数标签的字符串为空格字符串
+var a=[1,3,5,7,9,11,13]a赋予数组[]
+var n=0   n赋予0
+for (var i=0;i<a.length;i++)循环式
+{
+    n=n+a[i]循环内容
+}
+____________________________________________________________数组里的所有数相加
+var a=[1,2,3,5,8]a赋予数组[]
+var b=[]b赋予数组[]
+var n=0  n赋予0
+var m=0
+for(var i=0;i<a.length;i++)循环式
+{
+    n=b.unshift(a[i])循环内容n赋予数组b往数组前面添加(数组a[i标签内容])
+}
+for(var l=0;l<a.length;l++)循环式
+{
+    m=a.splice(l,a.length)循环内容数组a赋予a删减(位置l标签,a数组的长度个标签)
+}
+结果a=[]
+结果b=[8,5,3,2,1]
+___________________________________________________________数组内容的删减与添加
+
+要求b==[1,3,8]
+要求c==[5.2]
+var a =[1,2,3,5,8]已知条件
+var b=[]已知条件
+var c=[]已知条件
+var n=0
+var m=0
+for(var i=0;i<a.length;i+=2)循环式，初始-条件-变量
+{
+    n=b.push(a[i])n赋予b数组最后面添加(a数组[i标签])
+}
+for(var l=1;l<a.length;l+=2)循环式，初始-条件-变量
+{
+    m=c.unshift(a[l])m赋予c数组最前面添加(a数组[l标签])
+}
+________________________________________________________________-数组内容交换
+
+var a =[1,2,3,5,8,13,21]数组
+function k(x)函数k(x)
+{
+    var n=true;
+    if(x<=1)质数不能小于等于1
+        return false;所以结论直接是false
+    for(var i=2;i<x;i++)循环式
+    {
+        if(x%i==0)判断  若这个判断成立
+            n=false;那么这个数就不是质数
+    }
+    return n;结论 n
+}
+a.filter(k)  (对，错；ture false)  保留ture
+_______________________________________________________保留数组里所有质数
+var a=[1,2,3,2,1]数组
+var n=a.length%2==1?1:0;三目运算法判断数组长度奇偶数
+var x =a.slice(0,a.length/2);数组前部分
+var y=a.slice(a.length/2+n);数组后部分
+k(y)==k(x)数组前部分比较数组后部分
+function k(l)函数k(l)
+{
+    var m=0;自定义作用于代表数组内数字的和
+    for(var i=0;i<l.length;i++)循环式
+    {
+        m=m+l[i]数组内数字依次相加
+    }
+    return m;结论是m的值
+}
+______________________________________________________判断数组前后部分是否相等
+var a =[1,3,7,9,11,1,6,8,9,15]
+
+a.reduce   函数
+(function(x,y)x为初始 y为数组里的数
+{
+    if(y<=1)
+        return x;质数不能为1且为正整数
+    for(var i=2;i<y;i++)循环式
+    {
+        if(y%i==0)若此条件成立y就不是质数
+            y=0;y不是质数所以不与之相加
+    }
+    return x+y;初始数加上数组里相应的数
+},0)0为x且为初始
+_________________________________________________________数组质数的和
+var a=[1,2,3,4,5]
+a.map(function(x){return x*x})
+a=[1,4,9,16,25]
+var a=[1,2,3,4,5]
+a.map(function(x){return x+2})
+a=[3,4,5,6,7]
+____________________________________________________________map的运用
+var a =[1,2,3,5,8,7,4,6,9,3,4,1,2,3]
+
+a.reduce
+(function(x,y)
+{
+    if(y%2==1)
+        x.push(y);注意x.push(y)结果是x数组的长度
+        return x;
+},[])
+______________________________________________________________将一个数组的奇数分类到另一个空白数组

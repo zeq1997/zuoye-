@@ -1,0 +1,131 @@
+break ,continue ,return 的区别及作用？
+第一：break语句通常用在循环语句和开关语句中,当break语句用于do-while、for、while循环语句中时,可使程序终止循环而执行循环后面的语句, 通常break语句总是与if语句联在一起,即满足条件时便跳出循环。例如：
+main()
+{
+int i=0;
+char c;
+while(1)                 /*设置循环*/
+{
+c='\0';             /*变量赋初值*/
+while(c!=13&&c!=27) /*键盘接收字符直到按回车或Esc键*/
+{
+c=getch();
+printf("%c\n", c);
+}
+if(c==27)
+break;          /*判断若按Esc键则退出循环*/
+i++;
+printf("The No. is %d\n", i);
+}
+printf("The end");
+}
+注意:
+1)       break语句对if-else的条件语句不起作用。
+2)       在多层循环中, 一个break语句只向外跳一层。 
+
+第二：continue语句的作用是跳过循环本中剩余的语句而强行执行下一次循环。continue语句只用在for、while、do-while等循环体中,常与if条件语句一起使用,用来加速循环。
+例如：
+main()
+{
+char c;
+while(c!=13)      /*不是回车符则循环*/
+{
+c=getch();
+if(c==0X1B)
+continue; /*若按Esc键不输出便进行下次循环*/
+printf("%c\n", c);
+}
+}
+其实就是continue跳过一次循环以及后面的语句，进行下次循环。
+
+
+
+
+
+第三： return语句是将函数的值返回主调函数。例如：
+int max(int a,int b)
+{
+if(a>b)return a;
+else return b;
+}
+这个函数是返回a和b中的最大值；
+return  语句的一般形式为：
+return 表达式 
+或者为：
+return (表达式)
+
+
+
+
+ -- ------------------break和continue的区别；
+
+//break是结束整个循环体，continue是结束单次循环
+
+比方说：
+
+while(x++ < 10)
+{
+    if(x == 3)
+    {
+        break;
+    }
+    printf("%d\r\n", x);
+}
+结果是输出  1 2   就退出了整个while循环
+
+但是如果使用continue
+while(x++ < 10)
+{
+    if(x == 3)
+    {
+        continue;
+    }
+    printf("%d\r\n", x);
+}
+结果是：1 2 4 5 6 7 8 9 10  可见他仅仅是不输出3，因为他结束了本次循环
+
+function
+注：在函数里的数出现不倒在函数外；
+列---
+var m="abcd";                     
+var n="bc";
+var t=false;
+function k(m,n)
+{  
+   var a=m.split("");
+   var b=n.split("");
+   return;
+}
+在控制台上输a会报错；
+改；----
+var m="abcd";                    
+var n="bc";
+var t=false;
+function k(m,n)
+{  
+   var a=m.split("");
+      console.log(a);
+   var b=n.split("");
+      console.log(b);
+   return;
+}  
+k("abcd","bc");
+["a", "b", "c", "d"] 
+["b", "c"]
+
+
+
+  if (l1.Length < l2.Length)
+            {
+                var dis = l2.Length - l1.Length;
+                for (var
+ i = 0; i < dis; i++)
+                {
+                    l1 += " ";
+                }
+            }
+
+
+
+
+
